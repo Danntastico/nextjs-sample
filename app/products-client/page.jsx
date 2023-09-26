@@ -11,10 +11,10 @@ const fetcher = (...args) => fetch(...args).then(res => res.json())
 
 export default function ProductsClient () {
 
-  // const { data, loading, error } = useFetch(`api/products`)
-  const { data, isLoading, error } = useSWR(`${API_LINK}/products`, fetcher)
+   const { data, loading, error } = useFetch(`api/products`)
+  //const { data, isLoading, error } = useSWR(`${API_LINK}/products`, fetcher)
   
-  if (isLoading) {
+  if (loading) {
     return <div>Loading...</div>;
   }
 
